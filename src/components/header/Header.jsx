@@ -1,5 +1,7 @@
 import React from "react";
 import Logo from "../../images/logo.png";
+import Xbox from "../../images/xbox icon.svg";
+import Steam from "../../images/steam icon.svg";
 import Styles from "./Header.module.scss";
 
 function Header() {
@@ -24,10 +26,19 @@ function Header() {
             <option value="Deu">Deu</option>
           </select>
           <div className={Styles.header__divider} />
-          <div>
-            <a href="#home">Xbox</a>
-            <a href="#home">Steam</a>
+          <div className={Styles.header__platforms}>
+            <a href="#home" className={Styles.header__platformsItem}>
+              <img src={Xbox} alt="Xbox icon" />
+            </a>
+            <a href="#home" className={Styles.header__platformsItem}>
+              <img src={Steam} alt="Steam icon" />
+            </a>
           </div>
+        </div>
+        <div className={Styles.header__menuMobile}>
+          <div className={Styles.header__menuLine} />
+          <div className={Styles.header__menuLine} />
+          <div className={Styles.header__menuLine} />
         </div>
       </nav>
     </header>

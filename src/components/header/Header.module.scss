@@ -35,7 +35,14 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #fff;
-    padding: 5px;
+    padding: 7px;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      background: rgba(0, 0, 0, 0.75);
+      color: #ffb548;
+    }
   }
   &__secondaryMenu {
     display: flex;
@@ -56,10 +63,11 @@
     padding: 5px;
     cursor: pointer;
     border: none;
+    border-radius: 3px;
     &:hover,
     &:focus {
       background: rgba(0, 0, 0, 0.75);
-      border-radius: 3px;
+      color: #ffb548;
     }
   }
   &__divider {
@@ -67,5 +75,55 @@
     height: 30px;
     opacity: 0.5;
     border: 0.873968px solid #ffffff;
+  }
+  &__platforms {
+    display: flex;
+  }
+  &__platformsItem {
+    width: 30px;
+    height: 30px;
+  }
+  &__platformsItem ~ &__platformsItem {
+    margin-left: 17px;
+  }
+  &__menuMobile {
+    margin-left: 25px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 400ms ease;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.75);
+      // transform: scale(0.7) rotate(45deg);
+      // transition: all 0.25s ease 0.05s;
+      // &__menuLine {
+      //   background-color: #ffb548;
+      // }
+      // &__one {
+      //   transform: translateY(13px) rotate(0deg);
+      // }
+      // &__two {
+      //   opacity: 0;
+      // }
+      // &__three {
+      //   transform: translateY(-13px) rotate(90deg);
+      // }
+    }
+  }
+  &__menuLine {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.65s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  &__menuLine ~ &__menuLine {
+    margin-top: 7px;
   }
 }
