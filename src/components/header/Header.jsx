@@ -3,6 +3,7 @@ import Logo from "../../images/logo.png";
 import Xbox from "../../images/xbox icon.svg";
 import Steam from "../../images/steam icon.svg";
 import Styles from "./Header.module.scss";
+import "./MenuMobile.scss";
 
 function Header() {
   return (
@@ -35,10 +36,12 @@ function Header() {
             </a>
           </div>
         </div>
-        <div className={Styles.header__menuMobile}>
-          <div className={Styles.header__menuLine} />
-          <div className={Styles.header__menuLine} />
-          <div className={Styles.header__menuLine} />
+        <div className="header__menuMobile">
+          <div className="header__menuLineContainer">
+            <div className="header__menuLine header__menuLine--one" />
+            <div className="header__menuLine header__menuLine--two" />
+            <div className="header__menuLine header__menuLine--three" />
+          </div>
         </div>
       </nav>
     </header>

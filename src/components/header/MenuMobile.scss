@@ -1,0 +1,48 @@
+.header {
+  &__menuMobile {
+    margin-left: 25px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 400ms ease;
+    &:hover {
+      background: rgba(0, 0, 0, 0.75);
+      .header__menuLineContainer {
+        transform: scale(0.9) rotate(45deg);
+        transition: all 0.25s ease 0.05s;
+      }
+      .header__menuLine {
+        background-color: #ffb548;
+        &--one {
+          transform: translateY(10px) rotate(90deg);
+        }
+        &--two {
+          opacity: 0;
+        }
+        &--three {
+          transform: translateY(-10px) rotate(0deg);
+        }
+      }
+    }
+  }
+  &__menuLineContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__menuLine {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.65s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  &__menuLine ~ &__menuLine {
+    margin-top: 7px;
+  }
+}
