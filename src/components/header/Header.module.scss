@@ -21,6 +21,12 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media (max-width: 1200px) {
+      padding: 20px 2vw;
+    }
+    @media (max-width: 768px) {
+      padding: 20px 5vw;
+    }
   }
   &__logo {
     width: 55px;
@@ -28,6 +34,29 @@
   &__menuList {
     margin: 0 20px;
     display: flex;
+    @media (max-width: 768px) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 95px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.75);
+      &::before {
+        position: absolute;
+        top: -15px;
+        right: 3vw;
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        border-bottom: 15px solid rgba(0, 0, 0, 0.75);
+      }
+    }
+    &--active {
+      display: flex;
+    }
   }
   &__menuItem {
     margin: 0 20px;
@@ -45,10 +74,29 @@
       background: rgba(0, 0, 0, 0.75);
       color: #ffb548;
     }
+    @media (max-width: 1200px) {
+      margin: 0 10px;
+    }
+    @media (max-width: 768px) {
+      padding: 10px;
+    }
   }
   &__secondaryMenu {
     display: flex;
     align-items: center;
+    @media (max-width: 900px) {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 10px 33.5px;
+      position: absolute;
+      top: 295px;
+      right: 20px;
+    }
+    &--active {
+      display: flex;
+    }
   }
   &__lang {
     height: 30px;
@@ -77,6 +125,9 @@
     height: 30px;
     opacity: 0.5;
     border: 0.873968px solid #ffffff;
+    @media (max-width: 1200px) {
+      margin: 0 10px;
+    }
   }
   &__platforms {
     display: flex;

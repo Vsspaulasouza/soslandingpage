@@ -13,11 +13,11 @@ function Header() {
           <img src={Logo} alt="Logo" className={Styles.header__logo} />
         </a>
         <ul className={Styles.header__menuList}>
-          <li className={Styles.header__menuItem}>asdfg</li>
-          <li className={Styles.header__menuItem}>asdfg</li>
-          <li className={Styles.header__menuItem}>asdfg</li>
-          <li className={Styles.header__menuItem}>asdfg</li>
-          <li className={Styles.header__menuItem}>asdfg</li>
+          <li className={Styles.header__menuItem}>Main</li>
+          <li className={Styles.header__menuItem}>About</li>
+          <li className={Styles.header__menuItem}>Game features</li>
+          <li className={Styles.header__menuItem}>System requirements</li>
+          <li className={Styles.header__menuItem}>Quotes</li>
         </ul>
         <div className={Styles.header__secondaryMenu}>
           <select name="language" id="language" className={Styles.header__lang}>
@@ -36,7 +36,13 @@ function Header() {
             </a>
           </div>
         </div>
-        <div className="header__menuMobile">
+        <div
+          className="header__menuMobile"
+          // role="button"
+          // onClick={handleClick}
+          // onKeyDown={handleClick}
+          // tabIndex={0}
+        >
           <div className="header__menuLineContainer">
             <div className="header__menuLine header__menuLine--one" />
             <div className="header__menuLine header__menuLine--two" />

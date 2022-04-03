@@ -46,6 +46,9 @@
         }
       }
     }
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
   &__menuLineContainer {
     width: 100%;
