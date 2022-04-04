@@ -1,0 +1,26 @@
+.header {
+  &__menu {
+    position: fixed;
+    max-width: 1440px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: 1200px) {
+      padding: 20px 2vw;
+    }
+    @media (max-width: 768px) {
+      padding: 20px 5vw;
+    }
+  }
+  &__logo {
+    width: 55px;
+    transition: all 400ms ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
