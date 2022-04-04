@@ -1,6 +1,6 @@
 import React from "react";
-import Xbox from "../../images/xbox icon.svg";
-import Steam from "../../images/steam icon.svg";
+import Xbox from "../../../images/xbox icon.svg";
+import Steam from "../../../images/steam icon.svg";
 import Styles from "./SecondaryMenu.module.scss";
 
 function SecondaryMenu({ resolveClass }) {

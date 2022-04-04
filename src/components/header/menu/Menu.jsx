@@ -2,7 +2,7 @@ import React from "react";
 import MenuList from "./MenuList";
 import SecondaryMenu from "./SecondaryMenu";
 import MenuMobile from "./MenuMobile";
-import Logo from "../../images/logo.png";
+import Logo from "../../../images/logo.png";
 import Styles from "./Menu.module.scss";
 
 function Menu() {
