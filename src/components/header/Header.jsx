@@ -3,36 +3,55 @@ import Logo from "../../images/logo.png";
 import Xbox from "../../images/xbox icon.svg";
 import Steam from "../../images/steam icon.svg";
 import Styles from "./Header.module.scss";
-import "./MenuMobile.scss";
 
 function Header() {
   const [menuActive, setMenuActive] = React.useState("");
+
   function handleClick() {
     setMenuActive((currentActive) => (currentActive ? "" : "--active"));
   }
 
-  function resolveMenuClass(currentClass) {
-    return `${Styles[currentClass]} ${Styles[currentClass + menuActive]}`;
+  function resolveClass(currentClass, modifier) {
+    return modifier
+      ? `${Styles[currentClass]} ${Styles[currentClass + modifier]}`
+      : `${Styles[currentClass]} ${Styles[currentClass + menuActive]}`;
   }
+
+  const menuItens = [
+    "main",
+    "about",
+    "game features",
+    "system requirements",
+    "quotes",
+  ];
+
+  const languages = ["Eng", "Rus", "Fra", "Deu"];
+
   return (
     <header className={Styles.header}>
       <nav className={Styles.header__menu}>
         <a href="#home">
           <img src={Logo} alt="Logo" className={Styles.header__logo} />
         </a>
-        <ul className={resolveMenuClass("header__menuList")}>
-          <li className={Styles.header__menuItem}>Main</li>
-          <li className={Styles.header__menuItem}>About</li>
-          <li className={Styles.header__menuItem}>Game features</li>
-          <li className={Styles.header__menuItem}>System requirements</li>
-          <li className={Styles.header__menuItem}>Quotes</li>
+        <ul className={resolveClass("header__menuList")}>
+          {menuItens.map((menuItem) => (
+            <li key={menuItem} className={Styles.header__menuItem}>
+              <a
+                href={`#${menuItem.replace(" ", "-")}`}
+                className={Styles.header__menuLink}
+              >
+                {menuItem}
+              </a>
+            </li>
+          ))}
         </ul>
-        <div className={resolveMenuClass("header__secondaryMenu")}>
+        <div className={resolveClass("header__secondaryMenu")}>
           <select name="language" id="language" className={Styles.header__lang}>
-            <option value="Eng">Eng</option>
-            <option value="Rus">Rus</option>
-            <option value="Fra">Fra</option>
-            <option value="Deu">Deu</option>
+            {languages.map((lang) => (
+              <option key={lang} value={lang}>
+                {lang}
+              </option>
+            ))}
           </select>
           <div className={Styles.header__divider} />
           <div className={Styles.header__platforms}>
@@ -45,16 +64,16 @@ function Header() {
           </div>
         </div>
         <div
-          className={`header__menuMobile header__menuMobile${menuActive}`}
+          className={resolveClass("header__menuMobile")}
           role="button"
           onClick={handleClick}
           onKeyDown={handleClick}
           tabIndex={0}
         >
-          <div className="header__menuLineContainer">
-            <div className="header__menuLine header__menuLine--one" />
-            <div className="header__menuLine header__menuLine--two" />
-            <div className="header__menuLine header__menuLine--three" />
+          <div className={Styles.header__menuLineContainer}>
+            <div className={resolveClass("header__menuLine", "--one")} />
+            <div className={resolveClass("header__menuLine", "--two")} />
+            <div className={resolveClass("header__menuLine", "--three")} />
           </div>
         </div>
       </nav>
