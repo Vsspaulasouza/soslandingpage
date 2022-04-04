@@ -8,25 +8,6 @@
     border-radius: 10px;
     cursor: pointer;
     transition: all 400ms ease;
-    &:hover {
-      background: rgba(0, 0, 0, 0.75);
-      .header__menuLineContainer {
-        transform: scale(0.9) rotate(45deg);
-        transition: all 0.25s ease 0.05s;
-      }
-      .header__menuLine {
-        background-color: #ffb548;
-        &--one {
-          transform: translateY(10px) rotate(90deg);
-        }
-        &--two {
-          opacity: 0;
-        }
-        &--three {
-          transform: translateY(-10px) rotate(0deg);
-        }
-      }
-    }
     &--active {
       background: rgba(0, 0, 0, 0.75);
       .header__menuLineContainer {

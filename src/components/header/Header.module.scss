@@ -30,10 +30,15 @@
   }
   &__logo {
     width: 55px;
+    transition: all 400ms ease;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__menuList {
     margin: 0 20px;
     display: flex;
+    transition: all 400ms ease;
     @media (max-width: 768px) {
       display: none;
       flex-direction: column;
@@ -68,6 +73,7 @@
     color: #fff;
     padding: 7px;
     border-radius: 3px;
+    transition: all 400ms ease;
     cursor: pointer;
     &:hover,
     &:focus {
@@ -84,6 +90,7 @@
   &__secondaryMenu {
     display: flex;
     align-items: center;
+    transition: all 400ms ease;
     @media (max-width: 900px) {
       display: none;
     }
@@ -114,6 +121,7 @@
     cursor: pointer;
     border: none;
     border-radius: 3px;
+    transition: all 400ms ease;
     &:hover,
     &:focus {
       background: rgba(0, 0, 0, 0.75);
@@ -135,6 +143,10 @@
   &__platformsItem {
     width: 30px;
     height: 30px;
+    transition: all 400ms ease;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__platformsItem ~ &__platformsItem {
     margin-left: 17px;

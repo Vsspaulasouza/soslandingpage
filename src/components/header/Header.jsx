@@ -6,20 +6,28 @@ import Styles from "./Header.module.scss";
 import "./MenuMobile.scss";
 
 function Header() {
+  const [menuActive, setMenuActive] = React.useState("");
+  function handleClick() {
+    setMenuActive((currentActive) => (currentActive ? "" : "--active"));
+  }
+
+  function resolveMenuClass(currentClass) {
+    return `${Styles[currentClass]} ${Styles[currentClass + menuActive]}`;
+  }
   return (
     <header className={Styles.header}>
       <nav className={Styles.header__menu}>
         <a href="#home">
           <img src={Logo} alt="Logo" className={Styles.header__logo} />
         </a>
-        <ul className={Styles.header__menuList}>
+        <ul className={resolveMenuClass("header__menuList")}>
           <li className={Styles.header__menuItem}>Main</li>
           <li className={Styles.header__menuItem}>About</li>
           <li className={Styles.header__menuItem}>Game features</li>
           <li className={Styles.header__menuItem}>System requirements</li>
           <li className={Styles.header__menuItem}>Quotes</li>
         </ul>
-        <div className={Styles.header__secondaryMenu}>
+        <div className={resolveMenuClass("header__secondaryMenu")}>
           <select name="language" id="language" className={Styles.header__lang}>
             <option value="Eng">Eng</option>
             <option value="Rus">Rus</option>
@@ -37,11 +45,11 @@ function Header() {
           </div>
         </div>
         <div
-          className="header__menuMobile"
-          // role="button"
-          // onClick={handleClick}
-          // onKeyDown={handleClick}
-          // tabIndex={0}
+          className={`header__menuMobile header__menuMobile${menuActive}`}
+          role="button"
+          onClick={handleClick}
+          onKeyDown={handleClick}
+          tabIndex={0}
         >
           <div className="header__menuLineContainer">
             <div className="header__menuLine header__menuLine--one" />
