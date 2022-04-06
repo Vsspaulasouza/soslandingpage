@@ -8,10 +8,10 @@ function MainSection() {
   return (
     <section className={Styles.main}>
       <Title>Survive at all costs</Title>
-      <Subtitle style={{ "margin-top": "10px" }}>
+      <Subtitle style={{ marginTop: "10px" }}>
         Experience new social battle royale game
       </Subtitle>
-      <Button href="#Buy-now" style={{ "margin-top": "35px" }}>
+      <Button href="#Buy-now" style={{ marginTop: "35px" }}>
         <span>Buy now on Steam</span>
         <div className={Styles.button__divider} />
         <span>$14.99</span>
