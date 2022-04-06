@@ -9,11 +9,16 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    transition: all 400ms ease;
     @media (max-width: 1200px) {
       padding: 20px 2vw;
     }
     @media (max-width: 768px) {
       padding: 20px 5vw;
+    }
+    &--scroll {
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     }
   }
   &__logo {
