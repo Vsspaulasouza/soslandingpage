@@ -1,10 +1,16 @@
 import React from "react";
 import "./reset.scss";
-import "./App.scss"
+import "./App.scss";
 import Header from "./components/header/Header";
+import About from "./components/about/About";
 
 function App() {
-  return <Header/>
+  return (
+    <>
+      <Header />
+      <About />
+    </>
+  );
 }
 
 export default App;
