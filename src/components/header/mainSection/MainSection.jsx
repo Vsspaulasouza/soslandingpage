@@ -1,7 +1,5 @@
 import React from "react";
-import Title from "../../Title";
-import Subtitle from "../../Subtitle";
-import Button from "../../Button";
+import { Title, Subtitle, Button } from "../../PageComponents";
 import Styles from "./MainSection.module.scss";
 
 function MainSection() {

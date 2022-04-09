@@ -1,8 +1,11 @@
 import React from "react";
-import Subtitle from "../Subtitle";
-import Title from "../Title";
-import Text from "../Text";
-import SpecialText from "../SpecialText";
+import {
+  Title,
+  Subtitle,
+  Text,
+  BoldText as Bt,
+  HighlightedText as Ht,
+} from "../PageComponents";
 import Styles from "./AboutContent.module.scss";
 
 function AboutContent() {
@@ -12,17 +15,14 @@ function AboutContent() {
       <Title styledClass={Styles.about__title}>Social battle royale game</Title>
       <div className={Styles.about__divider} />
       <Text styledClass={Styles.about__text}>
-        Each round, <SpecialText>you</SpecialText> and{" "}
-        <SpecialText>15</SpecialText> other contestants compete to escape a
-        deadly island filled with monsters. The trick is:{" "}
-        <SpecialText>three</SpecialText> people can survive. Will you run solo
-        or form friendships with others to escape?
+        Each round, <Bt>you</Bt> and <Bt>15</Bt> other contestants compete to
+        escape a deadly island filled with monsters. The trick is:{" "}
+        <Bt>three</Bt> people can survive. Will you run solo or form friendships
+        with others to escape?
       </Text>
       <Text styledClass={Styles.about__text}>
         Making the right decisions could be the difference between{" "}
-        <SpecialText styledClass={Styles["about__specialText--yellow"]}>
-          life and death.
-        </SpecialText>
+        <Ht>life and death.</Ht>
       </Text>
     </div>
   );
