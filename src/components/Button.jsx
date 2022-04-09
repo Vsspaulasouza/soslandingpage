@@ -1,9 +1,9 @@
 import React from "react";
 import Styles from "./Button.module.scss";
 
-function Button({ href, style, children }) {
+function Button({ href, styledClass, children }) {
   return (
-    <a href={href} style={style} className={Styles.button}>
+    <a href={href} className={`${Styles.button} ${styledClass}`}>
       {children}
     </a>
   );

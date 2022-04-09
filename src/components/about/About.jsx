@@ -12,37 +12,17 @@ function About() {
         <div className={Styles.about__background2}>
           <div className={Styles.about__content}>
             <Subtitle>What is SOS?</Subtitle>
-            <Title
-              style={{
-                maxWidth: "410px",
-                textAlign: "initial",
-                marginTop: "13px",
-              }}
-            >
+            <Title styledClass={Styles.about__title}>
               Social battle royale game
             </Title>
             <div className={Styles.about__divider} />
-            <Text
-              style={{
-                maxWidth: "365px",
-                marginTop: "50px",
-                alignSelf: "flex-end",
-              }}
-            >
-              Each round, <span style={{ fontWeight: "bolder" }}>you</span> and{" "}
-              <span style={{ fontWeight: "bolder" }}>15</span> other contestants
+            <Text styledClass={Styles.about__text}>
+              Each round, <span>you</span> and <span>15</span> other contestants
               compete to escape a deadly island filled with monsters. The trick
-              is: <span style={{ fontWeight: "bolder" }}>three</span> people can
-              survive. Will you run solo or form friendships with others to
-              escape?
+              is: <span>three</span> people can survive. Will you run solo or
+              form friendships with others to escape?
             </Text>
-            <Text
-              style={{
-                maxWidth: "365px",
-                marginTop: "20px",
-                alignSelf: "flex-end",
-              }}
-            >
+            <Text styledClass={Styles.about__text}>
               Making the right decisions could be the difference between{" "}
               <span style={{ textDecoration: "underline #ffb548 6px" }}>
                 life and death.
