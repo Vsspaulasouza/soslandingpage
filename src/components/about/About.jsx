@@ -1,19 +1,13 @@
 import React from "react";
 import AboutContent from "./AboutContent";
-import Screenshot1 from "../../images/screenshot1.jpg";
+import Slider from "./Slider";
 import Styles from "./About.module.scss";
 
 function About() {
   return (
     <section className={Styles.about}>
       <AboutContent />
-      <div className={Styles.about__sliderContainer}>
-        <img
-          className={Styles.about__sliderImg}
-          src={Screenshot1}
-          alt="Screenshot"
-        />
-      </div>
+      <Slider />
     </section>
   );
 }
