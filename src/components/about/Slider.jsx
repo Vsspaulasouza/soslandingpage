@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Screenshot1 from "../../images/screenshot1.png";
 import Screenshot2 from "../../images/screenshot2.png";
 import Screenshot3 from "../../images/screenshot3.png";
+import Screenshot4 from "../../images/screenshot4.png";
 import "swiper/scss";
 import "./Slider.scss";
 
@@ -31,6 +32,9 @@ function Slider() {
       </SwiperSlide>
       <SwiperSlide>
         <img src={Screenshot3} alt="Screnshot 3" className="slider-img" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={Screenshot4} alt="Screnshot 4" className="slider-img" />
       </SwiperSlide>
     </Swiper>
   );
