@@ -18,6 +18,9 @@ function Slider() {
       grabCursor
       loop
       effect="cards"
+      cardsEffect={{
+        rotate: false,
+      }}
       // autoplay={{
       //   delay: 2500,
       //   disableOnInteraction: false,
