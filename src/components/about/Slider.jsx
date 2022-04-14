@@ -5,6 +5,7 @@ import Screenshot1 from "../../images/screenshot1.png";
 import Screenshot2 from "../../images/screenshot2.jpg";
 import Screenshot3 from "../../images/screenshot3.jpg";
 import Screenshot4 from "../../images/screenshot4.png";
+import Arrow from "../../images/switch.svg";
 import "swiper/scss";
 import "./Slider.scss";
 
@@ -13,7 +14,7 @@ function Slider() {
     <Swiper
       className="slider"
       modules={[Navigation, Pagination, EffectCards, Autoplay]}
-      navigation
+      navigation={{ nextEl: "#swiper-button-next" }}
       pagination={{ clickable: true }}
       grabCursor
       loop
@@ -47,6 +48,7 @@ function Slider() {
           <img src={Screenshot4} alt="Screnshot 4" className="slider-img" />
         </figure>
       </SwiperSlide>
+      <img id="swiper-button-next" src={Arrow} alt="Arrow next slide" />
     </Swiper>
   );
 }

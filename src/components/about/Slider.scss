@@ -19,7 +19,13 @@
   display: none;
 }
 
-.swiper-button-next {
+#swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0px;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .swiper-pagination {
