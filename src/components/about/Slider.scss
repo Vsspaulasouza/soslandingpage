@@ -29,10 +29,49 @@
 }
 
 .swiper-pagination {
+  display: flex;
+  position: absolute;
+  bottom: 26px;
+  left: 119px;
+  // translate: (-50%);
+  z-index: 10;
+  cursor: pointer;
 }
 
 .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  border: 1.30637px solid #ffffff;
+  transition: all 400ms ease;
+}
+
+.swiper-pagination-bullet ~ .swiper-pagination-bullet {
+  margin-left: 53px;
 }
 
 .swiper-pagination-bullet-active {
+  background-color: #ffffff;
+  &::after {
+    content: "";
+    display: block;
+    height: 1.95955px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    animation: linning 400ms 200ms forwards;
+  }
+}
+
+.swiper-pagination-bullet:last-of-type.swiper-pagination-bullet-active::after {
+  right: 0;
+}
+
+@keyframes linning {
+  from {
+    width: 0;
+  }
+  to {
+    width: 46px;
+  }
 }

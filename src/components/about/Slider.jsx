@@ -22,10 +22,10 @@ function Slider() {
       cardsEffect={{
         rotate: false,
       }}
-      // autoplay={{
-      //   delay: 2500,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
       width={502}
     >
       <SwiperSlide>
