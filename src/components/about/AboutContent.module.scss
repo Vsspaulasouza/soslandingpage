@@ -1,6 +1,6 @@
 .about {
   &__content {
-    width: 100%;
+    width: 35%;
     max-width: 570px;
     height: 610.52px;
     box-sizing: border-box;
@@ -10,6 +10,13 @@
     justify-content: flex-start;
     margin-right: 28px;
     padding-top: 55px;
+    @media (max-width: 1024px) {
+      max-width: 604px;
+      width: 70%;
+      height: auto;
+      padding: 0 0 80px 0;
+      margin: 0;
+    }
   }
   &__title {
     max-width: 410px;
@@ -31,5 +38,8 @@
     border-radius: 4px;
     margin-top: 10px;
     z-index: 10;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
   }
 }
