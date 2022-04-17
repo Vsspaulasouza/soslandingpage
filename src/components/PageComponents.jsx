@@ -5,6 +5,12 @@ export function Title({ styledClass, children }) {
   return <h2 className={`${Styles.title} ${styledClass}`}>{children}</h2>;
 }
 
+export function FeatureTitle({ styledClass, children }) {
+  return (
+    <h3 className={`${Styles.featureTitle} ${styledClass}`}>{children}</h3>
+  );
+}
+
 export function Subtitle({ styledClass, children }) {
   return <p className={`${Styles.subtitle} ${styledClass}`}>{children}</p>;
 }
