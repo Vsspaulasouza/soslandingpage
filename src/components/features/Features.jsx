@@ -9,7 +9,7 @@ function Features() {
         <Subtitle>What&apos;s so special?</Subtitle>
         <Title styledClass={Styles.features__title}>Features</Title>
         <div className={Styles.features__box}>
-          <FeatureTitle styledClass={Styles.features__featureTitle}>
+          <FeatureTitle styledClass={Styles.features__featureTitle} special>
             Survive at all costs
           </FeatureTitle>
           <Text styledClass={Styles.features__text}>

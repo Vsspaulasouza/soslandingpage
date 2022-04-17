@@ -82,6 +82,7 @@
       left: -24px;
       top: 30px;
       animation: linning1 700ms 200ms ease-in-out forwards;
+      animation-play-state: paused;
       @media (max-width: 958px) {
         animation-name: linning2;
       }
