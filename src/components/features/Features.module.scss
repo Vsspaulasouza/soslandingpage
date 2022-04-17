@@ -77,11 +77,26 @@
     &::after {
       content: "";
       width: 1.95955px;
-      height: 143px;
       background-color: #ffffff;
       position: absolute;
       left: -24px;
       top: 30px;
+      animation: linning1 700ms 200ms ease-in-out forwards;
+      @media (max-width: 958px) {
+        animation-name: linning2;
+      }
+      @media (max-width: 900px) {
+        animation-name: linning3;
+      }
+      @media (max-width: 700px) {
+        animation-name: linning4;
+      }
+      @media (max-width: 678px) {
+        animation-name: linning3;
+      }
+      @media (max-width: 386px) {
+        animation-name: linning5;
+      }
     }
   }
   &__featureTitle + &__featureTitle {
@@ -99,5 +114,49 @@
     @media (max-width: 900px) {
       margin-top: 20px;
     }
+  }
+}
+
+@keyframes linning1 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 143px;
+  }
+}
+
+@keyframes linning2 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 180px;
+  }
+}
+
+@keyframes linning3 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 194px;
+  }
+}
+
+@keyframes linning4 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 158px;
+  }
+}
+@keyframes linning5 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 216px;
   }
 }
