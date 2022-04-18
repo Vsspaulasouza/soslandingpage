@@ -6,7 +6,9 @@ import Table from "../../images/table.svg";
 function Requirements() {
   return (
     <section className={Styles.requirements}>
-      <Subtitle>Can My Computer Run this game?</Subtitle>
+      <Subtitle styledClass={Styles.requirements__subtitle}>
+        Can My Computer Run this game?
+      </Subtitle>
       <Title styledClass={Styles.requirements__title}>
         system requirements
       </Title>
