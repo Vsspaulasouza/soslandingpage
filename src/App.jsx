@@ -4,6 +4,7 @@ import "./App.scss";
 import Header from "./components/header/Header";
 import About from "./components/about/About";
 import Features from "./components/features/Features";
+import Requirements from "./components/requirements/Requirements";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <About />
       <Features />
+      <Requirements />
     </>
   );
 }
