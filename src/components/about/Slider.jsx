@@ -10,6 +10,8 @@ import "swiper/scss";
 import "./Slider.scss";
 
 function Slider() {
+  const sliderPages = [Screenshot1, Screenshot2, Screenshot3, Screenshot4];
+
   return (
     <Swiper
       className="slider"
@@ -28,26 +30,17 @@ function Slider() {
       }}
       width={502}
     >
-      <SwiperSlide>
-        <figure>
-          <img src={Screenshot1} alt="Screnshot 1" className="slider-img" />
-        </figure>
-      </SwiperSlide>
-      <SwiperSlide>
-        <figure>
-          <img src={Screenshot2} alt="Screnshot 2" className="slider-img" />
-        </figure>
-      </SwiperSlide>
-      <SwiperSlide>
-        <figure>
-          <img src={Screenshot3} alt="Screnshot 3" className="slider-img" />
-        </figure>
-      </SwiperSlide>
-      <SwiperSlide>
-        <figure>
-          <img src={Screenshot4} alt="Screnshot 4" className="slider-img" />
-        </figure>
-      </SwiperSlide>
+      {sliderPages.map((sliderPage, index) => (
+        <SwiperSlide key={sliderPage}>
+          <figure>
+            <img
+              src={sliderPage}
+              alt={`Screenshot ${index + 1}`}
+              className="slider-img"
+            />
+          </figure>
+        </SwiperSlide>
+      ))}
       <img id="swiper-button-next" src={Arrow} alt="Arrow next slide" />
     </Swiper>
   );
