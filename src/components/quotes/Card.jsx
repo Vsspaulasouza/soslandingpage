@@ -1,21 +1,21 @@
 import React from "react";
 import Styles from "./Card.module.scss";
-import { HighlightedText, Text } from "../PageComponents";
-import Twitter from "../../images/Twitter.svg";
+import { Title, Text } from "../PageComponents";
+import Twitter from "../../images/twitter.svg";
 
 function Card({ image, name, company, comment, date }) {
   return (
-    <div>
-      <div>
-        <img src={image} alt={name} />
-        <div>
-          <HighlightedText>{name}</HighlightedText>
-          <Text>{company}</Text>
+    <div className={Styles.card}>
+      <div className={Styles.card__header}>
+        <img src={image} alt={name} className={Styles.card__profile} />
+        <div className={Styles.card__info}>
+          <Title styledClass={Styles.card__name}>{name}</Title>
+          <Text styledClass={Styles.card__company}>{company}</Text>
         </div>
-        <img src={Twitter} alt="Twitter" />
+        <img src={Twitter} alt="Twitter" className={Styles.card__twitter} />
       </div>
-      <Text>{comment}</Text>
-      <Text>{date}</Text>
+      <Text styledClass={Styles.card__comment}>{`"${comment}"`}</Text>
+      <Text styledClass={Styles.card__date}>{date}</Text>
     </div>
   );
 }

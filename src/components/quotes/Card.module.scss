@@ -1,0 +1,48 @@
+.card {
+  max-width: 452.59px;
+  padding: 15px 20px 20px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  &__header {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &__profile {
+    width: 61.92px;
+    height: 61.83px;
+    box-shadow: 5px 5px 0px 0px #ffb548;
+    border-radius: 100px;
+  }
+  &__info {
+    margin-left: 22px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__name {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    color: #ffb548;
+  }
+  &__company {
+    opacity: 0.5;
+  }
+  &__twitter {
+    position: absolute;
+    top: 13px;
+    right: 0;
+  }
+  &__comment {
+    margin-top: 26.7px;
+  }
+  &__date {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+}
