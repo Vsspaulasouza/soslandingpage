@@ -3,9 +3,9 @@ import Styles from "./Card.module.scss";
 import { Title, Text } from "../PageComponents";
 import Twitter from "../../images/twitter.svg";
 
-function Card({ image, name, company, comment, date }) {
+function Card({ image, name, company, comment, date, styledClass }) {
   return (
-    <div className={Styles.card}>
+    <div className={`${Styles.card} ${styledClass}`}>
       <div className={Styles.card__header}>
         <img src={image} alt={name} className={Styles.card__profile} />
         <div className={Styles.card__info}>
