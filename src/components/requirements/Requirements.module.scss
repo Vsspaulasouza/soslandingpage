@@ -15,8 +15,12 @@
     ),
     url("../../images/bgrequirements.png") repeat-x center bottom,
     linear-gradient(#0b0b03, #0b0b03);
+
   @media (max-width: 1100px) {
     padding: 65px 20px;
+  }
+  @media (max-width: 1000px) {
+    padding: 65px 20px 0px 20px;
   }
   &__title {
     margin-top: 10px;
@@ -41,8 +45,12 @@
     margin-left: 100px;
     display: grid;
     grid: repeat(2, 126px) 133px / 277px 294px;
+    @media (min-width: 1440px) {
+      align-self: center;
+      transform: translate(-350px);
+    }
     @media (max-width: 1300px) {
-      margin-left: 25px;
+      margin-left: 50px;
     }
     @media (max-width: 1100px) {
       margin-left: 0;

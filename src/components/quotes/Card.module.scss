@@ -6,6 +6,9 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 500px) {
+    min-width: unset;
+  }
   &__header {
     display: flex;
     align-items: center;
@@ -21,12 +24,21 @@
     margin-left: 22px;
     display: flex;
     flex-direction: column;
+    @media (max-width: 500px) {
+      margin-left: 15px;
+    }
   }
   &__name {
     font-size: 2.4rem;
     line-height: 2.4rem;
     font-weight: 700;
     color: #ffb548;
+    text-align: left;
+    margin-right: 20px;
+    @media (max-width: 500px) {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
   }
   &__company {
     opacity: 0.5;
