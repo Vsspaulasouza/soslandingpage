@@ -6,6 +6,7 @@ import About from "./components/about/About";
 import Features from "./components/features/Features";
 import Requirements from "./components/requirements/Requirements";
 import Quotes from "./components/quotes/Quotes";
+import Newsletter from "./components/newsletter/Newsletter";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Features />
       <Requirements />
       <Quotes />
+      <Newsletter />
     </>
   );
 }
