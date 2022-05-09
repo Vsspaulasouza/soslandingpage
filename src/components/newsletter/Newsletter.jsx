@@ -1,6 +1,7 @@
 import React from "react";
 import Styles from "./Newsletter.module.scss";
 import { Subtitle, Title, Text, Button } from "../PageComponents";
+import newsletter from "../../images/newsletter.png";
 
 function Newsletter() {
   function handleSubmit(event) {
@@ -9,7 +10,14 @@ function Newsletter() {
 
   return (
     <section className={Styles.newsletter}>
-      <div className={Styles.newsletter__image} />
+      <div className={Styles.newsletter__imgContainer}>
+        <img
+          src={newsletter}
+          alt="Newsletter"
+          className={Styles.newsletter__image}
+        />
+        <div className={Styles.newsletter__imgGradient} />
+      </div>
       <div className={Styles.newsletter__content}>
         <Subtitle styledClass={Styles.newsletter__subtitle}>
           Want to stay in touch?
