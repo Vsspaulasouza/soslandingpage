@@ -7,6 +7,7 @@ import Features from "./components/features/Features";
 import Requirements from "./components/requirements/Requirements";
 import Quotes from "./components/quotes/Quotes";
 import Newsletter from "./components/newsletter/Newsletter";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Requirements />
       <Quotes />
       <Newsletter />
+      <Footer />
     </>
   );
 }
