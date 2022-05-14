@@ -66,7 +66,6 @@ function Footer() {
       <div className={Styles.footer__divider} />
       <div className={Styles.footer__secondary}>
         <p className={Styles.footer__copy}>
-          {" "}
           © 2018 Outpost Games, Inc. All Rights Reserved
         </p>
         <ul className={Styles.footer__policyMenu}>
