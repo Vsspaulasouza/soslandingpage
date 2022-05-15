@@ -7,59 +7,44 @@ import twitch from "../../images/twitch.svg";
 import Styles from "./Footer.module.scss";
 
 function Footer() {
+  const menuItens = [
+    { text: "Main", href: "#main" },
+    { text: "About", href: "#about" },
+    { text: "Game Features", href: "#game-features" },
+    { text: "Game Requirements", href: "#system-requirements" },
+    { text: "Quotes", href: "#quotes" },
+  ];
+
+  const socialMedias = [
+    { icon: facebook, name: "Facebook" },
+    { icon: twitter, name: "Twitter" },
+    { icon: youtube, name: "Youtube" },
+    { icon: twitch, name: "Twitch" },
+  ];
+
   return (
     <section className={Styles.footer}>
       <div className={Styles.footer__main}>
         <img src={logo} alt="Logo" className={Styles.footer__logo} />
         <nav className={Styles.footer__nav}>
           <ul className={Styles.footer__menu}>
-            <li className={Styles.footer__item}>
-              <a className={Styles.footer__link} href="#main">
-                Main
-              </a>
-            </li>
-            <li className={Styles.footer__item}>
-              <a className={Styles.footer__link} href="#about">
-                About
-              </a>
-            </li>
-            <li className={Styles.footer__item}>
-              <a className={Styles.footer__link} href="#features">
-                Game Features
-              </a>
-            </li>
-            <li className={Styles.footer__item}>
-              <a className={Styles.footer__link} href="#requirements">
-                Game Requirements
-              </a>
-            </li>
-            <li className={Styles.footer__item}>
-              <a className={Styles.footer__link} href="#quotes">
-                Quotes
-              </a>
-            </li>
+            {menuItens.map(({ text, href }) => (
+              <li key={text} className={Styles.footer__item}>
+                <a className={Styles.footer__link} href={href}>
+                  {text}
+                </a>
+              </li>
+            ))}
           </ul>
           <div className={Styles.footer__icons}>
-            <img
-              className={Styles.footer__icon}
-              src={facebook}
-              alt="Facebook icon"
-            />
-            <img
-              className={Styles.footer__icon}
-              src={twitter}
-              alt="Twitter icon"
-            />
-            <img
-              className={Styles.footer__icon}
-              src={youtube}
-              alt="Youtube icon"
-            />
-            <img
-              className={Styles.footer__icon}
-              src={twitch}
-              alt="Twitch icon"
-            />
+            {socialMedias.map(({ icon, name }) => (
+              <img
+                key={name}
+                className={Styles.footer__icon}
+                src={icon}
+                alt={`${name} icon`}
+              />
+            ))}
           </div>
         </nav>
       </div>

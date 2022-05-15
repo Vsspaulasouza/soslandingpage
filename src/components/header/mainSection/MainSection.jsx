@@ -4,7 +4,7 @@ import Styles from "./MainSection.module.scss";
 
 function MainSection() {
   return (
-    <section className={Styles.main}>
+    <section className={Styles.main} id="main">
       <Title>Survive at all costs</Title>
       <Subtitle styledClass={Styles.main__subtitle}>
         Experience new social battle royale game

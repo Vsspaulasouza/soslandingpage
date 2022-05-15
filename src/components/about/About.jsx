@@ -5,7 +5,7 @@ import Styles from "./About.module.scss";
 
 function About() {
   return (
-    <section className={Styles.about}>
+    <section className={Styles.about} id="about">
       <AboutContent />
       <Slider />
     </section>

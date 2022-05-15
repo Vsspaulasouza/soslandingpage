@@ -10,6 +10,22 @@ import Newsletter from "./components/newsletter/Newsletter";
 import Footer from "./components/footer/Footer";
 
 function App() {
+  const INTERNAL_LINKS = document.querySelectorAll('a[href^="#"]');
+
+  function scrollToSection(event) {
+    event.preventDefault();
+    const HREF = event.currentTarget.getAttribute("href");
+    const SECTION = document.querySelector(HREF);
+    SECTION.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
+  INTERNAL_LINKS.forEach((link) =>
+    link.addEventListener("click", scrollToSection)
+  );
+
   return (
     <>
       <Header />

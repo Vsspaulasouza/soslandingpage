@@ -4,10 +4,10 @@ import Styles from "./ScrollDownButton.module.scss";
 
 function ScrollDownButton() {
   return (
-    <button type="button" className={Styles.button}>
+    <a href="#about" className={Styles.button}>
       <span className={Styles.button__text}>The story</span>
       <img src={Arrow} alt="Arrow" />
-    </button>
+    </a>
   );
 }
 

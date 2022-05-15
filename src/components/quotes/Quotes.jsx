@@ -34,7 +34,7 @@ function Quotes() {
   ];
 
   return (
-    <section className={Styles.quotes}>
+    <section className={Styles.quotes} id="quotes">
       <div className={Styles.quotes__content}>
         <Subtitle styledClass={Styles.quotes__subtitle}>
           What people think?

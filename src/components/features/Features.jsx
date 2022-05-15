@@ -4,7 +4,7 @@ import Styles from "./Features.module.scss";
 
 function Features() {
   return (
-    <section className={Styles.features}>
+    <section className={Styles.features} id="game-features">
       <div className={Styles.features__content}>
         <Subtitle>What&apos;s so special?</Subtitle>
         <Title styledClass={Styles.features__title}>Features</Title>
